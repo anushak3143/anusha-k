@@ -1,0 +1,27 @@
+<html>
+
+<body>
+ 
+
+ <h1 id="myH"></h1>
+ <p id="myP"></P>
+
+ // activity  2
+ <p id="result"></p>
+
+ <script>
+ // my heading :
+ document.getElementById("myH").innerHTML = "javascript comments";
+ // my paragraph :
+ document.getElementById("myP").innerHTML = "my first paragraph" ;
+
+ // activity 2
+  var num1 = 5;
+  var num2 = 6;
+  var sum = num1 + num2;
+  document.getElementById("result").innerHTML = "The total sum is: + sum;
+
+ 
+ </script>
+</body>
+</html>
