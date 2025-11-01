@@ -1,84 +1,304 @@
-  <!-- Social Media Section -->
-   <section class="social-section">
-    <div class="container">
-        <h2>Follow Me on Social Media</h2>
-        <div class="social-icons mt-4">
-            <a href="#"><i class="bi bi-facbook"></i></a>
-            <a href="#"><i class="bi bi-twitter"></i></a>
-            <a href="#"><i class="bi bi-intagram"></i></a>
-            <a href="#"><i class="bi bi-linkedin"></i></a>
-            <a href="#"><i class="bi bi-github"></i></a>
-        </div>
-    </div>    
-  </section>
-  <footer>
-    <div class="container">
-        <h2>@copyright-2025</h2>
-     </div>
-  </footer>
-
-  <!--Bootstrap Icons CDN -->
+<!-- Activity-1 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Navigation Bar Example</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Bootstrap CSS -->
   <link
-  rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
 
-href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+  <style>
+    /* Custom Banner Styling */
+    .banner {
+      background-image: url('banner.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+    .banner::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
 
-/>
+    .banner-content {
+      position: relative;
+      z-index: 1;
+    }
 
-<!-- Bootstrap JS -->
+    .about-section {
+      background-color: #f8f9fa;
+      padding: 60px 0;
+    }
+    .about-image img {
+      border-radius: 15px;
+      width: 100%;
+    }
+    .about-content h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+    }
+    .about-content p {
+      font-size: 1.1rem;
+      color: #555;
+    }
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
- 
- <!-- DAY-3 CODE -->
+    /*  Social Media Section Styling */
+    .social-section {
+      background-color: #212529;
+      color: white;
+      padding: 60px 0;
+      text-align: center;
+    }
+    .social-section h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+    .social-icons a {
+      color: white;
+      font-size: 1.8rem;
+      margin: 0 15px;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #0d6efd; /* Bootstrap blue */
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">My Website</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<!-- <!DOCTYPE html> -->
-<!-- <html lang="en"> -->
-<!-- <head> -->
-  <!-- <meta charset="UTF-8" /> -->
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
-  <h2>A simple calculator</h2>
-  <!-- <link rel="stylesheet" href="style.css" /> -->
-<!-- </head> -->
-<!-- <body> -->
+  <!-- Banner Section -->
+  <section class="banner">
+    <div class="banner-content">
+      <h1 class="display-4 fw-bold">Welcome to My Website</h1>
+      <p class="lead">Learn. Create. Explore with Bootstrap.</p>
+      <a href="#" class="btn btn-primary btn-lg mt-3">Get Started</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="container">
+      <div class="row align-items-center">
+      
+        <div class="col-md-6 about-image">
+          <img src="https://via.placeholder.com/500" alt="About us image" />
+        </div>
+      
+        <div class="col-md-6 about-content">
+          <h2>About Us</h2>
+          <p>
+            Welcome to our website! We are a team of passionate developers dedicated to creating high-quality, responsive, and user-friendly web experiences.
+          </p>
+          <button class="btn btn-primary mt-3">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  Project Section -->
+  <section id="projects" class="container my-5">
+    <h2 class="text-center mb-4">My Projects</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="project1.jpg" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">Project One</h5>
+            <p class="card-text">A responsive website built using HTML, CSS, and Bootstrap.</p>
+            <a href="#" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="project2.jpg" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h5 class="card-title">Project Two</h5>
+            <p class="card-text">An interactive JavaScript app with real-time data updates.</p>
+            <a href="#" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <img src="project3.jpg" class="card-img-top" alt="Project 3">
+          <div class="card-body">
+            <h5 class="card-title">Project Three</h5>
+            <p class="card-text">A portfolio website showcasing creative design layouts.</p>
+            <a href="#" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION ADDED -->
+  <!-- Functioning of the Calculator Section -->
+  <section id="functioning" class="py-5 text-center bg-light">
+    <div class="container">
+      <h2 class="mb-4 fw-bold">Functioning of the Calculator</h2>
+      <p class="lead">
+        This simple calculator demonstrates how CSS enhances user experience through design. 
+        Buttons include smooth hover and press animations, a glowing display area, and 
+        soft transitions to make calculation interactive and visually appealing.
+      </p>
+    </div>
+  </section>
+
+<!-- DAY-3 CODE -->
+<h2 class="text-center my-4">A Simple Calculator</h2>
 <div id="container">
   <div id="calculator">
-      <div id="display">
-        <input type="text" id="result" disabled />
-      </div>
+    <div id="display">
+      <input type="text" id="result" disabled />
+    </div>
+    <div id="keyboard">
+      <button class="operator" id="clear">C</button>
+      <button class="operator" id="backspace">CE</button>
+      <button class="operator" id="modulus">%</button>
+      <button class="operator" id="divide">÷</button>
 
-      <div id="keyboard">
-        <button class="operator" id="clear">C</button>
-        <button class="operator" id="backspace">CE</button>
-        <button class="operator" id="%">%</button>
-        <button class="operator" id="divide">÷</button>
+      <button class="number" id="7">7</button>
+      <button class="number" id="8">8</button>
+      <button class="number" id="9">9</button>
+      <button class="operator" id="multiply">&times;</button>
 
-        <button class="number" id="7">7</button>
-        <button class="number" id="8">8</button>
-        <button class="number" id="9">9</button>
-        <button class="operator" id="multiply">&times;</button>
+      <button class="number" id="4">4</button>
+      <button class="number" id="5">5</button>
+      <button class="number" id="6">6</button>
+      <button class="operator" id="subtract">−</button>
 
-        <button class="number" id="4">4</button>
-        <button class="number" id="5">5</button>
-        <button class="number" id="6">6</button>
-        <button class="operator" id="subtract">−</button>
+      <button class="number" id="1">1</button>
+      <button class="number" id="2">2</button>
+      <button class="number" id="3">3</button>
+      <button class="operator" id="add">+</button>
 
-        <button class="number" id="1">1</button>
-        <button class="number" id="2">2</button>
-        <button class="number" id="3">3</button>
-        <button class="operator" id="add">+</button>
-
-        <button class="empty" id="empty1"></button>
-        <button class="number" id="0">0</button>
-        <button class="empty" id="empty2"></button>
-        <button class="operator" id="equals">=</button>
-      </div>
+      <button class="empty" id="empty1"></button>
+      <button class="number" id="0">0</button>
+      <button class="empty" id="empty2"></button>
+      <button class="operator" id="equals">=</button>
+    </div>
   </div>
 </div>
+<!-- DAY-3 CODE END -->
 
-  <script src="script.js"></script>
-<!-- </body> -->
-<!-- </html> -->
-<!-- DAY 3 CODE END -->
+<!-- WORKING CALCULATOR SCRIPT -->
+<script>
+  const result = document.getElementById("result");
+  const buttons = document.querySelectorAll("#keyboard button");
+
+  let displayValue = ""; // what user sees
+  let currentInput = "";
+  let operator = "";
+  let previousInput = "";
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      const id = button.id;
+      const text = button.textContent;
+
+      // Numbers
+      if (button.classList.contains("number")) {
+        currentInput += text;
+        displayValue += text;
+        result.value = displayValue;
+      }
+      // Clear all
+      else if (id === "clear") {
+        currentInput = "";
+        previousInput = "";
+        operator = "";
+        displayValue = "";
+        result.value = "";
+      }
+      // Backspace
+      else if (id === "backspace") {
+        currentInput = currentInput.slice(0, -1);
+        displayValue = displayValue.slice(0, -1);
+        result.value = displayValue;
+      }
+      // Equals (=)
+      else if (id === "equals") {
+        if (previousInput && currentInput && operator) {
+          const output = calculate(previousInput, currentInput, operator);
+          displayValue += " = " + output;
+          result.value = displayValue;
+          // Reset
+          currentInput = output;
+          previousInput = "";
+          operator = "";
+          displayValue = output.toString(); // allow chaining next ops
+        }
+      }
+      // Operator (+, −, ×, ÷, %)
+      else {
+        if (currentInput === "") return; // ignore if pressed first
+        if (previousInput !== "") {
+          const output = calculate(previousInput, currentInput, operator);
+          previousInput = output;
+        } else {
+          previousInput = currentInput;
+        }
+        operator = id;
+        displayValue += " " + text + " ";
+        result.value = displayValue;
+        currentInput = "";
+      }
+    });
+  });
+  function calculate(a, b, op) {
+    a = parseFloat(a);
+    b = parseFloat(b);
+    switch (op) {
+      case "add": return a + b;
+      case "subtract": return a - b;
+      case "multiply": return a * b;
+      case "divide": return b !== 0 ? a / b : "Error";
+      case "modulus": return a % b;
+      default: return b;
+    }
+  }
+</script>
 
   <!-- Social Media Section -->
   <section class="social-section">
@@ -93,11 +313,13 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.c
       </div>
     </div>
   </section>
+
   <footer>
     <div class="container">
       <h2>@copyright-2025</h2>
     </div>
   </footer>
+
 
   <!-- Bootstrap Icons CDN -->
   <link
@@ -108,4 +330,10 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.c
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-</body></html>
+    <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+</html>
